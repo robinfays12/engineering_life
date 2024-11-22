@@ -1,7 +1,7 @@
 import cv2
 from picamera2 import Picamera2
 
-face_cascade = cv2.CascadeClassifier('./opencv-4.x/data/haarcascades/haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
 def detect_face(img):
 	coord = face_cascade.detectMultiScale(img)
